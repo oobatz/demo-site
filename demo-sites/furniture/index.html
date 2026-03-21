@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>WoodArt Studio | Мебель, которая создает дом</title>
+    <meta
+      name="description"
+      content="WoodArt Studio создает мебель на заказ и готовые дизайнерские решения из массива дерева для уютных и современных интерьеров."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              sand: '#f9f7f2',
+              mist: '#f3f4f6',
+              pine: '#0f766e',
+              terracotta: '#c2410c',
+              bark: '#6f4e37',
+              ink: '#1f2937',
+              linen: '#ede6d8'
+            },
+            fontFamily: {
+              heading: ['Cormorant Garamond', 'serif'],
+              body: ['Manrope', 'sans-serif']
+            },
+            boxShadow: {
+              soft: '0 24px 60px rgba(31, 41, 55, 0.12)'
+            },
+            backgroundImage: {
+              'hero-glow':
+                'radial-gradient(circle at top left, rgba(255,255,255,0.2), transparent 30%), linear-gradient(135deg, rgba(0,0,0,0.35), rgba(0,0,0,0.12))'
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background:
+          radial-gradient(circle at top, rgba(237, 230, 216, 0.65), transparent 26%),
+          linear-gradient(180deg, #ffffff 0%, #f9f7f2 40%, #ffffff 100%);
+      }
+
+      .section-shell {
+        position: relative;
+      }
+
+      .section-shell::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.42) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.42) 1px, transparent 1px);
+        background-size: 52px 52px;
+        mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.32), transparent 85%);
+        opacity: 0.3;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(32px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .glass-header {
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+      }
+
+      .gallery-track,
+      .testimonial-track {
+        scrollbar-width: none;
+      }
+
+      .gallery-track::-webkit-scrollbar,
+      .testimonial-track::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="font-body text-ink antialiased selection:bg-pine/20">
+    <!-- Шапка сайта с адаптивной навигацией -->
+    <header
+      id="site-header"
+      class="fixed inset-x-0 top-0 z-50 transition-all duration-300"
+    >
+      <div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
+        <div
+          id="header-shell"
+          class="glass-header flex items-center justify-between rounded-full border border-white/40 bg-white/50 px-5 py-3 shadow-lg shadow-stone-900/5 transition-all duration-300"
+        >
+          <a href="#hero" class="flex items-center gap-3">
+            <span
+              class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-terracotta/10 text-lg font-bold text-terracotta"
+              >W</span
+            >
+            <span class="font-heading text-2xl font-semibold tracking-wide text-ink"
+              >WoodArt Studio</span
+            >
+          </a>
+
+          <nav class="hidden items-center gap-8 text-sm font-semibold lg:flex">
+            <a class="transition hover:text-terracotta" href="#catalog">Каталог</a>
+            <a class="transition hover:text-terracotta" href="#quiz">На заказ</a>
+            <a class="transition hover:text-terracotta" href="#about">О студии</a>
+            <a class="transition hover:text-terracotta" href="#contact">Контакты</a>
+          </nav>
+
+          <div class="hidden items-center gap-3 lg:flex">
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-2 rounded-full bg-terracotta px-5 py-3 text-sm font-bold text-white transition hover:bg-orange-700"
+            >
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.78 19.78 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.78 19.78 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.77.68 2.6a2 2 0 0 1-.45 2.11L8.1 9.91a16 16 0 0 0 6 6l1.48-1.24a2 2 0 0 1 2.11-.45c.83.33 1.7.56 2.6.68A2 2 0 0 1 22 16.92z" />
+              </svg>
+              Заказать звонок
+            </a>
+          </div>
+
+          <button
+            id="menu-toggle"
+            type="button"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-stone-200 bg-white text-ink lg:hidden"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+
+        <div
+          id="mobile-menu"
+          class="mt-3 hidden rounded-3xl border border-stone-200 bg-white/95 p-5 shadow-soft lg:hidden"
+        >
+          <nav class="flex flex-col gap-4 text-base font-semibold">
+            <a class="mobile-link transition hover:text-terracotta" href="#catalog">Каталог</a>
+            <a class="mobile-link transition hover:text-terracotta" href="#quiz">На заказ</a>
+            <a class="mobile-link transition hover:text-terracotta" href="#about">О студии</a>
+            <a class="mobile-link transition hover:text-terracotta" href="#contact">Контакты</a>
+          </nav>
+          <a
+            href="#contact"
+            class="mt-5 inline-flex w-full items-center justify-center rounded-full bg-terracotta px-5 py-3 text-sm font-bold text-white transition hover:bg-orange-700"
+            >Заказать звонок</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Первый экран с атмосферной подачей бренда -->
+      <section id="hero" class="section-shell relative min-h-screen overflow-hidden">
+        <img
+          src="./assets/hero-interior.svg?v=20260321-2"
+          alt="Современный интерьер с мебелью из дерева"
+          class="absolute inset-0 h-full w-full object-cover"
+        />
+        <div class="absolute inset-0 bg-hero-glow"></div>
+        <div class="relative mx-auto flex min-h-screen max-w-7xl items-end px-4 pb-16 pt-32 sm:px-6 lg:px-8">
+          <div class="grid w-full gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+            <div class="reveal max-w-3xl">
+              <span
+                class="mb-6 inline-flex rounded-full border border-white/30 bg-white/15 px-4 py-2 text-sm font-medium text-white/90 shadow-lg shadow-black/10"
+                >Премиальная мебель на заказ и готовые коллекции</span
+              >
+              <div class="mb-5 inline-flex rounded-full bg-terracotta/85 px-4 py-2 text-xs font-bold uppercase tracking-[0.25em] text-white shadow-lg shadow-black/10">
+                New Visual 21.03.2026
+              </div>
+              <h1
+                class="font-heading text-5xl font-semibold leading-none text-white sm:text-6xl lg:text-7xl"
+              >
+                Мебель, которая создает дом
+              </h1>
+              <p class="mt-6 max-w-2xl text-lg leading-8 text-white/85 sm:text-xl">
+                Индивидуальное проектирование и изготовление мебели из массива
+                дерева для квартир, домов и камерных коммерческих пространств.
+              </p>
+              <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+                <a
+                  href="#quiz"
+                  class="inline-flex items-center justify-center rounded-full bg-terracotta px-7 py-4 text-base font-bold text-white transition hover:bg-orange-700"
+                  >Рассчитать стоимость</a
+                >
+                <a
+                  href="#catalog"
+                  class="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-7 py-4 text-base font-semibold text-white transition hover:bg-white/20"
+                  >Смотреть коллекции</a
+                >
+              </div>
+            </div>
+
+            <div class="reveal rounded-[2rem] border border-white/20 bg-white/10 p-6 text-white shadow-soft">
+              <div class="grid gap-5 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+                <div>
+                  <p class="text-4xl font-heading font-semibold">12+</p>
+                  <p class="mt-2 text-sm uppercase tracking-[0.2em] text-white/70">
+                    лет в студии
+                  </p>
+                </div>
+                <div>
+                  <p class="text-4xl font-heading font-semibold">480</p>
+                  <p class="mt-2 text-sm uppercase tracking-[0.2em] text-white/70">
+                    реализованных проектов
+                  </p>
+                </div>
+                <div>
+                  <p class="text-4xl font-heading font-semibold">5 лет</p>
+                  <p class="mt-2 text-sm uppercase tracking-[0.2em] text-white/70">
+                    гарантия на мебель
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Каталог с карточками популярных направлений -->
+      <section id="catalog" class="relative py-24 sm:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="reveal flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div class="max-w-2xl">
+              <p class="text-sm font-bold uppercase tracking-[0.3em] text-pine">
+                Популярные коллекции
+              </p>
+              <h2 class="mt-4 font-heading text-4xl font-semibold text-ink sm:text-5xl">
+                Продуманные решения для кухни, гостиной и спальни
+              </h2>
+            </div>
+            <p class="max-w-xl text-base leading-7 text-stone-600">
+              Каждая коллекция может быть адаптирована под размеры помещения,
+              привычки семьи и стилистику интерьера.
+            </p>
+          </div>
+
+          <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <article class="reveal group overflow-hidden rounded-[2rem] bg-white shadow-soft">
+              <div class="relative overflow-hidden">
+                <img
+                  src="./assets/catalog-kitchen.svg?v=20260321-2"
+                  alt="Деревянная кухня"
+                  class="h-80 w-full object-cover transition duration-700 group-hover:scale-110"
+                />
+                <div class="absolute inset-x-0 bottom-0 p-5">
+                  <a
+                    href="#contact"
+                    class="inline-flex translate-y-6 rounded-full bg-white/90 px-5 py-3 text-sm font-bold text-ink opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between gap-4">
+                  <h3 class="font-heading text-3xl font-semibold">Кухни</h3>
+                  <span class="text-sm text-stone-500">от 290 000 ₽</span>
+                </div>
+                <p class="mt-3 text-sm leading-6 text-stone-600">
+                  Теплая геометрия фасадов, тихая фурнитура и практичная эргономика.
+                </p>
+              </div>
+            </article>
+
+            <article class="reveal group overflow-hidden rounded-[2rem] bg-white shadow-soft">
+              <div class="relative overflow-hidden">
+                <img
+                  src="./assets/catalog-wardrobe.svg?v=20260321-2"
+                  alt="Дизайнерский шкаф"
+                  class="h-80 w-full object-cover transition duration-700 group-hover:scale-110"
+                />
+                <div class="absolute inset-x-0 bottom-0 p-5">
+                  <a
+                    href="#contact"
+                    class="inline-flex translate-y-6 rounded-full bg-white/90 px-5 py-3 text-sm font-bold text-ink opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between gap-4">
+                  <h3 class="font-heading text-3xl font-semibold">Шкафы</h3>
+                  <span class="text-sm text-stone-500">от 160 000 ₽</span>
+                </div>
+                <p class="mt-3 text-sm leading-6 text-stone-600">
+                  Встроенные и корпусные решения для спокойного и аккуратного хранения.
+                </p>
+              </div>
+            </article>
+
+            <article class="reveal group overflow-hidden rounded-[2rem] bg-white shadow-soft">
+              <div class="relative overflow-hidden">
+                <img
+                  src="./assets/catalog-table.svg?v=20260321-2"
+                  alt="Деревянный обеденный стол"
+                  class="h-80 w-full object-cover transition duration-700 group-hover:scale-110"
+                />
+                <div class="absolute inset-x-0 bottom-0 p-5">
+                  <a
+                    href="#contact"
+                    class="inline-flex translate-y-6 rounded-full bg-white/90 px-5 py-3 text-sm font-bold text-ink opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between gap-4">
+                  <h3 class="font-heading text-3xl font-semibold">Столы</h3>
+                  <span class="text-sm text-stone-500">от 84 000 ₽</span>
+                </div>
+                <p class="mt-3 text-sm leading-6 text-stone-600">
+                  Обеденные, рабочие и журнальные столы с характерной фактурой древесины.
+                </p>
+              </div>
+            </article>
+
+            <article class="reveal group overflow-hidden rounded-[2rem] bg-white shadow-soft">
+              <div class="relative overflow-hidden">
+                <img
+                  src="./assets/catalog-decor.svg?v=20260321-2"
+                  alt="Декор из дерева"
+                  class="h-80 w-full object-cover transition duration-700 group-hover:scale-110"
+                />
+                <div class="absolute inset-x-0 bottom-0 p-5">
+                  <a
+                    href="#contact"
+                    class="inline-flex translate-y-6 rounded-full bg-white/90 px-5 py-3 text-sm font-bold text-ink opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between gap-4">
+                  <h3 class="font-heading text-3xl font-semibold">Декор</h3>
+                  <span class="text-sm text-stone-500">от 18 000 ₽</span>
+                </div>
+                <p class="mt-3 text-sm leading-6 text-stone-600">
+                  Панели, полки и акцентные предметы для завершенного интерьера.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Процесс работы с визуальным таймлайном -->
+      <section class="py-24 sm:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="reveal max-w-2xl">
+            <p class="text-sm font-bold uppercase tracking-[0.3em] text-pine">
+              Процесс работы
+            </p>
+            <h2 class="mt-4 font-heading text-4xl font-semibold sm:text-5xl">
+              От первой заявки до установки без лишнего шума
+            </h2>
+          </div>
+
+          <div class="mt-12 grid gap-6 lg:grid-cols-5">
+            <article class="reveal rounded-[2rem] border border-stone-200 bg-white p-6 shadow-soft">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-sand text-pine">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M4 5h16v10H4z" />
+                  <path d="M8 19h8" />
+                  <path d="M10 15v4M14 15v4" />
+                </svg>
+              </div>
+              <p class="mt-5 text-sm font-bold uppercase tracking-[0.2em] text-stone-400">01</p>
+              <h3 class="mt-2 text-xl font-semibold">Заявка</h3>
+              <p class="mt-3 text-sm leading-6 text-stone-600">
+                Обсуждаем помещение, стиль и бюджет. Фиксируем вводные за один звонок.
+              </p>
+            </article>
+
+            <article class="reveal rounded-[2rem] border border-stone-200 bg-white p-6 shadow-soft">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-sand text-pine">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M3 21l18-18" />
+                  <path d="M14 4l6 6" />
+                  <path d="M4 14l6 6" />
+                </svg>
+              </div>
+              <p class="mt-5 text-sm font-bold uppercase tracking-[0.2em] text-stone-400">02</p>
+              <h3 class="mt-2 text-xl font-semibold">Замер</h3>
+              <p class="mt-3 text-sm leading-6 text-stone-600">
+                Выезжаем на объект, снимаем точные размеры и оцениваем технические детали.
+              </p>
+            </article>
+
+            <article class="reveal rounded-[2rem] border border-stone-200 bg-white p-6 shadow-soft">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-sand text-pine">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M4 19l5.5-5.5" />
+                  <path d="M12 16l8-8" />
+                  <path d="M10 6l8 8" />
+                </svg>
+              </div>
+              <p class="mt-5 text-sm font-bold uppercase tracking-[0.2em] text-stone-400">03</p>
+              <h3 class="mt-2 text-xl font-semibold">Эскиз</h3>
+              <p class="mt-3 text-sm leading-6 text-stone-600">
+                Готовим визуальную концепцию, подбор материалов и финальную смету.
+              </p>
+            </article>
+
+            <article class="reveal rounded-[2rem] border border-stone-200 bg-white p-6 shadow-soft">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-sand text-pine">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M4 7h16M4 12h16M4 17h10" />
+                </svg>
+              </div>
+              <p class="mt-5 text-sm font-bold uppercase tracking-[0.2em] text-stone-400">04</p>
+              <h3 class="mt-2 text-xl font-semibold">Производство</h3>
+              <p class="mt-3 text-sm leading-6 text-stone-600">
+                Изготавливаем мебель на собственном производстве с контролем качества.
+              </p>
+            </article>
+
+            <article class="reveal rounded-[2rem] border border-stone-200 bg-white p-6 shadow-soft">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-sand text-pine">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M3 7h13v10H3z" />
+                  <path d="M16 10h2l3 3v4h-5z" />
+                  <circle cx="7.5" cy="18.5" r="1.5" />
+                  <circle cx="18.5" cy="18.5" r="1.5" />
+                </svg>
+              </div>
+              <p class="mt-5 text-sm font-bold uppercase tracking-[0.2em] text-stone-400">05</p>
+              <h3 class="mt-2 text-xl font-semibold">Доставка</h3>
+              <p class="mt-3 text-sm leading-6 text-stone-600">
+                Привозим, поднимаем, устанавливаем и оставляем пространство чистым.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Интерактивный квиз для сбора лида -->
+      <section id="quiz" class="py-24 sm:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+            <div class="reveal rounded-[2rem] bg-ink p-8 text-white shadow-soft sm:p-10">
+              <p class="text-sm font-bold uppercase tracking-[0.3em] text-emerald-300">
+                Лид-магнит
+              </p>
+              <h2 class="mt-4 font-heading text-4xl font-semibold sm:text-5xl">
+                Узнайте стоимость вашей мебели за 1 минуту
+              </h2>
+              <p class="mt-5 text-base leading-7 text-white/75">
+                Пройдите короткий опрос и получите предварительный расчет, подбор
+                материалов и скидку 10% на первый заказ.
+              </p>
+              <div class="mt-8 rounded-[1.5rem] bg-white/10 p-5">
+                <p class="text-sm uppercase tracking-[0.25em] text-white/60">
+                  Бонус после прохождения
+                </p>
+                <p class="mt-3 text-2xl font-heading font-semibold">
+                  Скидка 10% на первый заказ
+                </p>
+              </div>
+            </div>
+
+            <div class="reveal rounded-[2rem] border border-stone-200 bg-white p-6 shadow-soft sm:p-8">
+              <div class="mb-8 flex items-center justify-between gap-3">
+                <div>
+                  <p class="text-sm font-bold uppercase tracking-[0.25em] text-stone-400">
+                    Квиз
+                  </p>
+                  <h3 class="mt-2 text-2xl font-semibold">Подберите конфигурацию</h3>
+                </div>
+                <span
+                  id="quiz-progress"
+                  class="rounded-full bg-sand px-4 py-2 text-sm font-semibold text-terracotta"
+                  >Шаг 1 из 3</span
+                >
+              </div>
+
+              <form id="quiz-form" class="space-y-6">
+                <div class="quiz-step space-y-4" data-step="1">
+                  <p class="text-lg font-semibold">Что вы хотите изготовить?</p>
+                  <label class="flex cursor-pointer items-center gap-4 rounded-2xl border border-stone-200 p-4 transition hover:border-terracotta">
+                    <input class="h-4 w-4 accent-terracotta" type="radio" name="furnitureType" value="Кухня" checked />
+                    <span>
+                      <span class="block font-semibold">Кухня</span>
+                      <span class="text-sm text-stone-500">Полный комплект со столешницей и фурнитурой</span>
+                    </span>
+                  </label>
+                  <label class="flex cursor-pointer items-center gap-4 rounded-2xl border border-stone-200 p-4 transition hover:border-terracotta">
+                    <input class="h-4 w-4 accent-terracotta" type="radio" name="furnitureType" value="Шкаф" />
+                    <span>
+                      <span class="block font-semibold">Шкаф или гардеробная</span>
+                      <span class="text-sm text-stone-500">Встроенная система хранения под ваш размер</span>
+                    </span>
+                  </label>
+                  <label class="flex cursor-pointer items-center gap-4 rounded-2xl border border-stone-200 p-4 transition hover:border-terracotta">
+                    <input class="h-4 w-4 accent-terracotta" type="radio" name="furnitureType" value="Стол" />
+                    <span>
+                      <span class="block font-semibold">Стол</span>
+                      <span class="text-sm text-stone-500">Обеденный, рабочий или журнальный стол</span>
+                    </span>
+                  </label>
+                </div>
+
+                <div class="quiz-step hidden space-y-4" data-step="2">
+                  <p class="text-lg font-semibold">Какой материал вам ближе?</p>
+                  <label class="flex cursor-pointer items-center gap-4 rounded-2xl border border-stone-200 p-4 transition hover:border-pine">
+                    <input class="h-4 w-4 accent-pine" type="radio" name="material" value="Массив дуба" checked />
+                    <span>
+                      <span class="block font-semibold">Массив дуба</span>
+                      <span class="text-sm text-stone-500">Максимальная долговечность и выразительная фактура</span>
+                    </span>
+                  </label>
+                  <label class="flex cursor-pointer items-center gap-4 rounded-2xl border border-stone-200 p-4 transition hover:border-pine">
+                    <input class="h-4 w-4 accent-pine" type="radio" name="material" value="Шпон + МДФ" />
+                    <span>
+                      <span class="block font-semibold">Шпон + МДФ</span>
+                      <span class="text-sm text-stone-500">Тонкий баланс эстетики, стабильности и бюджета</span>
+                    </span>
+                  </label>
+                  <label class="flex cursor-pointer items-center gap-4 rounded-2xl border border-stone-200 p-4 transition hover:border-pine">
+                    <input class="h-4 w-4 accent-pine" type="radio" name="material" value="Комбинация дерева и металла" />
+                    <span>
+                      <span class="block font-semibold">Дерево + металл</span>
+                      <span class="text-sm text-stone-500">Современный характер для loft и minimal интерьеров</span>
+                    </span>
+                  </label>
+                </div>
+
+                <div class="quiz-step hidden space-y-4" data-step="3">
+                  <p class="text-lg font-semibold">Оставьте контакты для расчета</p>
+                  <div class="grid gap-4 sm:grid-cols-2">
+                    <input
+                      class="rounded-2xl border border-stone-200 px-5 py-4 outline-none transition focus:border-terracotta"
+                      type="text"
+                      name="name"
+                      placeholder="Ваше имя"
+                    />
+                    <input
+                      class="rounded-2xl border border-stone-200 px-5 py-4 outline-none transition focus:border-terracotta"
+                      type="tel"
+                      name="phone"
+                      placeholder="+7 (___) ___-__-__"
+                      required
+                    />
+                  </div>
+                  <div class="rounded-2xl bg-sand p-5 text-sm leading-6 text-stone-600">
+                    После отправки мы свяжемся с вами, уточним размеры и подготовим
+                    ориентир по стоимости с учетом выбранного материала.
+                  </div>
+                </div>
+
+                <div class="flex flex-col gap-3 border-t border-stone-100 pt-6 sm:flex-row sm:justify-between">
+                  <button
+                    id="quiz-prev"
+                    type="button"
+                    class="hidden rounded-full border border-stone-300 px-6 py-3 text-sm font-semibold text-ink transition hover:border-stone-400"
+                  >
+                    Назад
+                  </button>
+                  <div class="flex gap-3 sm:ml-auto">
+                    <button
+                      id="quiz-next"
+                      type="button"
+                      class="rounded-full bg-pine px-6 py-3 text-sm font-bold text-white transition hover:bg-teal-700"
+                    >
+                      Далее
+                    </button>
+                    <button
+                      id="quiz-submit"
+                      type="submit"
+                      class="hidden rounded-full bg-terracotta px-6 py-3 text-sm font-bold text-white transition hover:bg-orange-700"
+                    >
+                      Получить расчет
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              <div
+                id="quiz-result"
+                class="mt-6 hidden rounded-[1.5rem] bg-emerald-50 p-6 text-emerald-900"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Блок о качестве материалов и производстве -->
+      <section id="about" class="py-24 sm:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-8 lg:grid-cols-[1fr_1.05fr]">
+            <div class="reveal overflow-hidden rounded-[2rem] shadow-soft">
+              <img
+                src="./assets/material-texture.svg?v=20260321-2"
+                alt="Фактура натурального дерева"
+                class="h-full min-h-[420px] w-full object-cover"
+              />
+            </div>
+
+            <div class="reveal rounded-[2rem] bg-white p-8 shadow-soft sm:p-10">
+              <p class="text-sm font-bold uppercase tracking-[0.3em] text-pine">
+                Качество и экология
+              </p>
+              <h2 class="mt-4 font-heading text-4xl font-semibold sm:text-5xl">
+                Материалы, которым приятно доверять дом
+              </h2>
+              <p class="mt-5 max-w-2xl text-base leading-8 text-stone-600">
+                Мы работаем с массивом дуба, ясеня и ореха, используем устойчивые
+                покрытия и фурнитуру с ресурсом на годы спокойной эксплуатации.
+              </p>
+
+              <div class="mt-8 grid gap-4 sm:grid-cols-3">
+                <div class="rounded-[1.5rem] bg-sand p-5">
+                  <h3 class="text-lg font-semibold">Экологичные материалы</h3>
+                  <p class="mt-3 text-sm leading-6 text-stone-600">
+                    Сертифицированная древесина и безопасные масла без резкого запаха.
+                  </p>
+                </div>
+                <div class="rounded-[1.5rem] bg-sand p-5">
+                  <h3 class="text-lg font-semibold">Blum / Hettich</h3>
+                  <p class="mt-3 text-sm leading-6 text-stone-600">
+                    Петли и направляющие премиум-класса для тихого плавного хода.
+                  </p>
+                </div>
+                <div class="rounded-[1.5rem] bg-sand p-5">
+                  <h3 class="text-lg font-semibold">Гарантия 5 лет</h3>
+                  <p class="mt-3 text-sm leading-6 text-stone-600">
+                    Поддержка после установки и сервисное сопровождение проекта.
+                  </p>
+                </div>
+              </div>
+
+              <div class="mt-8 rounded-[1.75rem] border border-stone-200 p-6">
+                <p class="text-sm uppercase tracking-[0.25em] text-stone-400">
+                  Почему нас выбирают
+                </p>
+                <p class="mt-3 text-lg leading-8 text-stone-700">
+                  Студия соединяет скандинавскую чистоту форм с живой теплотой
+                  натурального дерева, чтобы интерьер выглядел дорогим и жилым одновременно.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Дополнительная галерея деталей проекта с упором на мобильный свайп -->
+      <section class="py-24 sm:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="reveal flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div class="max-w-2xl">
+              <p class="text-sm font-bold uppercase tracking-[0.3em] text-pine">
+                Галерея деталей
+              </p>
+              <h2 class="mt-4 font-heading text-4xl font-semibold sm:text-5xl">
+                Фактуры, пропорции и спокойные интерьерные сцены
+              </h2>
+            </div>
+            <div class="flex gap-3">
+              <button
+                type="button"
+                data-slider-prev="gallery"
+                class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-stone-300 bg-white transition hover:border-terracotta hover:text-terracotta"
+                aria-label="Предыдущий слайд галереи"
+              >
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                data-slider-next="gallery"
+                class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-stone-300 bg-white transition hover:border-terracotta hover:text-terracotta"
+                aria-label="Следующий слайд галереи"
+              >
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M9 6l6 6-6 6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div
+            id="gallery-track"
+            class="gallery-track mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-4"
+          >
+            <article class="reveal min-w-[88%] snap-start overflow-hidden rounded-[2rem] bg-white shadow-soft sm:min-w-[420px] lg:min-w-[520px]">
+              <img
+                src="./assets/gallery-kitchen-detail.svg?v=20260321-2"
+                alt="Кухонный гарнитур с теплыми древесными фасадами"
+                class="h-72 w-full object-cover sm:h-80"
+              />
+              <div class="p-6">
+                <p class="text-sm font-bold uppercase tracking-[0.2em] text-pine">
+                  Кухонная композиция
+                </p>
+                <p class="mt-3 text-base leading-7 text-stone-600">
+                  Ритм фасадов, мягкие нейтральные плоскости и ощущение спокойного порядка.
+                </p>
+              </div>
+            </article>
+
+            <article class="reveal min-w-[88%] snap-start overflow-hidden rounded-[2rem] bg-white shadow-soft sm:min-w-[420px] lg:min-w-[520px]">
+              <img
+                src="./assets/gallery-table-detail.svg?v=20260321-2"
+                alt="Обеденный стол из дерева с выразительной формой"
+                class="h-72 w-full object-cover sm:h-80"
+              />
+              <div class="p-6">
+                <p class="text-sm font-bold uppercase tracking-[0.2em] text-pine">
+                  Обеденная группа
+                </p>
+                <p class="mt-3 text-base leading-7 text-stone-600">
+                  Крупная столешница и теплый тон древесины собирают всю комнату вокруг центра.
+                </p>
+              </div>
+            </article>
+
+            <article class="reveal min-w-[88%] snap-start overflow-hidden rounded-[2rem] bg-white shadow-soft sm:min-w-[420px] lg:min-w-[520px]">
+              <img
+                src="./assets/gallery-materials.svg?v=20260321-2"
+                alt="Подборка деревянных материалов и оттенков"
+                class="h-72 w-full object-cover sm:h-80"
+              />
+              <div class="p-6">
+                <p class="text-sm font-bold uppercase tracking-[0.2em] text-pine">
+                  Палитра материалов
+                </p>
+                <p class="mt-3 text-base leading-7 text-stone-600">
+                  Подбираем оттенки так, чтобы мебель жила в интерьере долго и не устаревала визуально.
+                </p>
+              </div>
+            </article>
+
+            <article class="reveal min-w-[88%] snap-start overflow-hidden rounded-[2rem] bg-white shadow-soft sm:min-w-[420px] lg:min-w-[520px]">
+              <img
+                src="./assets/gallery-showroom-corner.svg?v=20260321-2"
+                alt="Фрагмент шоурума с диваном и системой хранения"
+                class="h-72 w-full object-cover sm:h-80"
+              />
+              <div class="p-6">
+                <p class="text-sm font-bold uppercase tracking-[0.2em] text-pine">
+                  Уголок шоурума
+                </p>
+                <p class="mt-3 text-base leading-7 text-stone-600">
+                  Здесь можно увидеть сочетание фактур, примерить покрытия и оценить масштаб решений.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Галерея отзывов со свайпом на мобильных устройствах -->
+      <section class="py-24 sm:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="reveal flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div class="max-w-2xl">
+              <p class="text-sm font-bold uppercase tracking-[0.3em] text-pine">
+                Отзывы клиентов
+              </p>
+              <h2 class="mt-4 font-heading text-4xl font-semibold sm:text-5xl">
+                Интерьеры, в которых мебель становится частью ритма жизни
+              </h2>
+            </div>
+            <div class="flex gap-3">
+              <button
+                type="button"
+                data-slider-prev="testimonials"
+                class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-stone-300 bg-white transition hover:border-terracotta hover:text-terracotta"
+                aria-label="Предыдущий отзыв"
+              >
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                data-slider-next="testimonials"
+                class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-stone-300 bg-white transition hover:border-terracotta hover:text-terracotta"
+                aria-label="Следующий отзыв"
+              >
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M9 6l6 6-6 6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div
+            id="testimonials-track"
+            class="testimonial-track mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-4"
+          >
+            <article class="reveal min-w-[85%] snap-start rounded-[2rem] bg-mist p-4 shadow-soft sm:min-w-[420px]">
+              <img
+                src="./assets/testimonial-living.svg?v=20260321-2"
+                alt="Интерьер клиента с мебелью"
+                class="h-64 w-full rounded-[1.5rem] object-cover"
+              />
+              <div class="p-4">
+                <p class="text-base leading-7 text-stone-700">
+                  «Кухня получилась очень спокойной и дорогой на вид. Команда
+                  продумала хранение до мелочей, а дерево стало главным акцентом квартиры».
+                </p>
+                <p class="mt-4 text-sm font-bold uppercase tracking-[0.2em] text-stone-500">
+                  Анна, ЖК River Park
+                </p>
+              </div>
+            </article>
+
+            <article class="reveal min-w-[85%] snap-start rounded-[2rem] bg-mist p-4 shadow-soft sm:min-w-[420px]">
+              <img
+                src="./assets/testimonial-wardrobe.svg?v=20260321-2"
+                alt="Гардеробная клиента"
+                class="h-64 w-full rounded-[1.5rem] object-cover"
+              />
+              <div class="p-4">
+                <p class="text-base leading-7 text-stone-700">
+                  «Шкаф встроили идеально. По ощущениям это часть архитектуры, а не просто мебель.
+                  Очень аккуратный монтаж и сильная дизайнерская подача».
+                </p>
+                <p class="mt-4 text-sm font-bold uppercase tracking-[0.2em] text-stone-500">
+                  Дмитрий, частный дом в Алматы
+                </p>
+              </div>
+            </article>
+
+            <article class="reveal min-w-[85%] snap-start rounded-[2rem] bg-mist p-4 shadow-soft sm:min-w-[420px]">
+              <img
+                src="./assets/testimonial-dining.svg?v=20260321-2"
+                alt="Столовая клиента"
+                class="h-64 w-full rounded-[1.5rem] object-cover"
+              />
+              <div class="p-4">
+                <p class="text-base leading-7 text-stone-700">
+                  «Стол из ореха собрал всю зону гостиной вокруг себя. Это тот редкий случай,
+                  когда вещь выглядит лучше, чем на визуализации».
+                </p>
+                <p class="mt-4 text-sm font-bold uppercase tracking-[0.2em] text-stone-500">
+                  Мария, студия дизайна Atelier 29
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Финальный призыв с формой и контактами -->
+      <section id="contact" class="pb-16 pt-24 sm:pb-20 sm:pt-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+            <div class="reveal rounded-[2rem] bg-white p-8 shadow-soft sm:p-10">
+              <p class="text-sm font-bold uppercase tracking-[0.3em] text-pine">
+                Контакты
+              </p>
+              <h2 class="mt-4 font-heading text-4xl font-semibold sm:text-5xl">
+                Приглашаем в шоу-рум
+              </h2>
+              <p class="mt-5 text-base leading-8 text-stone-600">
+                Покажем образцы древесины, покрытия, механизмы и соберем вместе
+                настроение будущего интерьера.
+              </p>
+
+              <form class="mt-8 space-y-4">
+                <input
+                  class="w-full rounded-2xl border border-stone-200 px-5 py-4 outline-none transition focus:border-pine"
+                  type="text"
+                  placeholder="Имя"
+                />
+                <input
+                  class="w-full rounded-2xl border border-stone-200 px-5 py-4 outline-none transition focus:border-pine"
+                  type="tel"
+                  placeholder="Телефон"
+                />
+                <button
+                  type="submit"
+                  class="w-full rounded-full bg-terracotta px-6 py-4 text-sm font-bold text-white transition hover:bg-orange-700"
+                >
+                  Записаться на просмотр
+                </button>
+              </form>
+            </div>
+
+            <div class="reveal overflow-hidden rounded-[2rem] bg-ink text-white shadow-soft">
+              <div class="relative h-full min-h-[480px]">
+                <img
+                  src="./assets/showroom.svg?v=20260321-2"
+                  alt="Шоу-рум WoodArt Studio"
+                  class="absolute inset-0 h-full w-full object-cover opacity-40"
+                />
+                <div class="absolute inset-0 bg-gradient-to-br from-ink/95 via-ink/85 to-terracotta/55"></div>
+                <div class="relative flex h-full flex-col justify-between p-8 sm:p-10">
+                  <div>
+                    <p class="text-sm uppercase tracking-[0.25em] text-white/60">
+                      WoodArt Studio
+                    </p>
+                    <p class="mt-5 text-2xl font-heading font-semibold">
+                      Алматы, проспект Абая, 149
+                    </p>
+                    <p class="mt-3 text-lg text-white/75">
+                      Ежедневно с 10:00 до 20:00
+                    </p>
+                  </div>
+                  <div class="grid gap-6 sm:grid-cols-2">
+                    <div>
+                      <p class="text-sm uppercase tracking-[0.2em] text-white/60">Телефон</p>
+                      <a class="mt-2 block text-xl font-semibold hover:text-emerald-300" href="tel:+77000000000"
+                        >+7 (700) 000-00-00</a
+                      >
+                    </div>
+                    <div>
+                      <p class="text-sm uppercase tracking-[0.2em] text-white/60">E-mail</p>
+                      <a class="mt-2 block text-xl font-semibold hover:text-emerald-300" href="mailto:hello@woodart.studio"
+                        >hello@woodart.studio</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Минималистичный футер с соцсетями -->
+    <footer class="border-t border-stone-200 py-8">
+      <div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 text-sm text-stone-500 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+        <p>© 2026 WoodArt Studio. Мебель, которая создает дом.</p>
+        <div class="flex flex-wrap gap-4">
+          <a class="transition hover:text-terracotta" href="#">Instagram</a>
+          <a class="transition hover:text-terracotta" href="#">Pinterest</a>
+          <a class="transition hover:text-terracotta" href="#">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Логика закрепленной шапки и мобильного меню.
+      const header = document.getElementById('site-header');
+      const headerShell = document.getElementById('header-shell');
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      const updateHeaderState = () => {
+        if (window.scrollY > 24) {
+          header.classList.add('py-1');
+          headerShell.classList.remove('bg-white/50', 'border-white/40');
+          headerShell.classList.add('bg-white/95', 'border-stone-200', 'shadow-soft');
+        } else {
+          header.classList.remove('py-1');
+          headerShell.classList.add('bg-white/50', 'border-white/40');
+          headerShell.classList.remove('bg-white/95', 'border-stone-200', 'shadow-soft');
+        }
+      };
+
+      menuToggle.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden');
+        menuToggle.setAttribute('aria-expanded', String(!isOpen));
+      });
+
+      mobileLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      window.addEventListener('scroll', updateHeaderState);
+      updateHeaderState();
+
+      // Анимация плавного появления секций при прокрутке.
+      const revealItems = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.18 }
+      );
+
+      revealItems.forEach((item) => revealObserver.observe(item));
+
+      // Пошаговый квиз с простым сценарием переключения.
+      const quizSteps = [...document.querySelectorAll('.quiz-step')];
+      const progressLabel = document.getElementById('quiz-progress');
+      const prevButton = document.getElementById('quiz-prev');
+      const nextButton = document.getElementById('quiz-next');
+      const submitButton = document.getElementById('quiz-submit');
+      const quizForm = document.getElementById('quiz-form');
+      const quizResult = document.getElementById('quiz-result');
+      let currentStep = 1;
+
+      const renderQuizStep = () => {
+        quizSteps.forEach((step, index) => {
+          step.classList.toggle('hidden', index !== currentStep - 1);
+        });
+
+        progressLabel.textContent = `Шаг ${currentStep} из 3`;
+        prevButton.classList.toggle('hidden', currentStep === 1);
+        nextButton.classList.toggle('hidden', currentStep === 3);
+        submitButton.classList.toggle('hidden', currentStep !== 3);
+      };
+
+      prevButton.addEventListener('click', () => {
+        if (currentStep > 1) {
+          currentStep -= 1;
+          renderQuizStep();
+        }
+      });
+
+      nextButton.addEventListener('click', () => {
+        if (currentStep < 3) {
+          currentStep += 1;
+          renderQuizStep();
+        }
+      });
+
+      quizForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const formData = new FormData(quizForm);
+        const type = formData.get('furnitureType');
+        const material = formData.get('material');
+        const name = formData.get('name') || 'Гость';
+        quizResult.classList.remove('hidden');
+        quizResult.innerHTML = `
+          <p class="text-sm font-bold uppercase tracking-[0.25em] text-emerald-700">Предварительный расчет</p>
+          <p class="mt-3 text-2xl font-semibold">Спасибо, ${name}.</p>
+          <p class="mt-3 leading-7">
+            Мы подготовим расчет для категории <strong>${type}</strong> с материалом <strong>${material}</strong>
+            и свяжемся с вами в ближайшее время. Скидка 10% уже закреплена за вашей заявкой.
+          </p>
+        `;
+      });
+
+      renderQuizStep();
+
+      // Универсальный горизонтальный слайдер для отзывов со свайпом на мобильных.
+      const sliderMap = {
+        gallery: document.getElementById('gallery-track'),
+        testimonials: document.getElementById('testimonials-track')
+      };
+
+      const scrollSlider = (key, direction) => {
+        const track = sliderMap[key];
+        if (!track) return;
+        const card = track.querySelector('article');
+        const amount = card ? card.getBoundingClientRect().width + 24 : 360;
+        track.scrollBy({ left: amount * direction, behavior: 'smooth' });
+      };
+
+      document.querySelectorAll('[data-slider-prev]').forEach((button) => {
+        button.addEventListener('click', () => scrollSlider(button.dataset.sliderPrev, -1));
+      });
+
+      document.querySelectorAll('[data-slider-next]').forEach((button) => {
+        button.addEventListener('click', () => scrollSlider(button.dataset.sliderNext, 1));
+      });
+    </script>
+  </body>
+</html>

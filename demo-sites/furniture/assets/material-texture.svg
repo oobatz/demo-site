@@ -1,0 +1,22 @@
+<svg width="1200" height="1400" viewBox="0 0 1200 1400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1400" fill="url(#wood)"/>
+  <path d="M112 0C190 142 82 292 156 448C228 604 120 766 194 938C266 1106 182 1238 250 1400" stroke="#835233" stroke-width="28" stroke-linecap="round"/>
+  <path d="M286 0C364 120 284 270 352 434C430 626 306 786 388 964C462 1126 362 1252 444 1400" stroke="#9A6844" stroke-width="34" stroke-linecap="round"/>
+  <path d="M498 0C560 130 454 288 536 444C626 622 518 774 598 952C662 1098 570 1244 646 1400" stroke="#744A30" stroke-width="28" stroke-linecap="round"/>
+  <path d="M690 0C764 124 662 262 742 420C824 584 724 760 798 934C864 1092 770 1240 852 1400" stroke="#A57450" stroke-width="32" stroke-linecap="round"/>
+  <path d="M902 0C974 154 890 314 964 494C1036 666 954 840 1022 1020C1084 1182 1020 1280 1092 1400" stroke="#8B5D3E" stroke-width="34" stroke-linecap="round"/>
+  <ellipse cx="478" cy="784" rx="156" ry="114" stroke="#E4C29F" stroke-width="20"/>
+  <ellipse cx="478" cy="784" rx="90" ry="62" stroke="#F0D8BC" stroke-width="14"/>
+  <ellipse cx="860" cy="386" rx="122" ry="86" stroke="#D6B089" stroke-width="16"/>
+  <path d="M0 0H1200V1400H0V0Z" fill="url(#gloss)" opacity="0.2"/>
+  <defs>
+    <linearGradient id="wood" x1="600" y1="0" x2="600" y2="1400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C89362"/>
+      <stop offset="1" stop-color="#A56E47"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="198" y1="128" x2="1040" y2="1264" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white"/>
+      <stop offset="1" stop-color="#6F4E37" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>
