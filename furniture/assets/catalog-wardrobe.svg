@@ -1,0 +1,30 @@
+<svg width="900" height="1100" viewBox="0 0 900 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="1100" fill="url(#bg)"/>
+  <rect y="812" width="900" height="288" fill="url(#floor)"/>
+  <rect x="106" y="98" width="688" height="736" rx="30" fill="#FBF7F1"/>
+  <rect x="146" y="146" width="172" height="642" rx="20" fill="url(#warm)"/>
+  <rect x="334" y="146" width="172" height="642" rx="20" fill="#D9C0A4"/>
+  <rect x="522" y="146" width="118" height="642" rx="20" fill="#E9DCC9"/>
+  <rect x="656" y="146" width="98" height="642" rx="20" fill="#8C6A4D"/>
+  <rect x="186" y="204" width="92" height="410" rx="12" fill="#E9D9C5"/>
+  <rect x="202" y="224" width="60" height="106" rx="10" fill="#F8F2E9"/>
+  <rect x="552" y="240" width="56" height="22" rx="11" fill="#CA8C63"/>
+  <rect x="552" y="288" width="56" height="22" rx="11" fill="#CA8C63"/>
+  <rect x="552" y="336" width="56" height="22" rx="11" fill="#CA8C63"/>
+  <rect x="688" y="194" width="28" height="548" rx="14" fill="#E8D8C8"/>
+  <ellipse cx="450" cy="842" rx="262" ry="42" fill="#D6BFA2"/>
+  <defs>
+    <linearGradient id="bg" x1="450" y1="0" x2="450" y2="1100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4EEE6"/>
+      <stop offset="1" stop-color="#DBC19F"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="450" y1="812" x2="450" y2="1100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8BE9C"/>
+      <stop offset="1" stop-color="#C19672"/>
+    </linearGradient>
+    <linearGradient id="warm" x1="232" y1="146" x2="232" y2="788" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C77948"/>
+      <stop offset="1" stop-color="#A6623D"/>
+    </linearGradient>
+  </defs>
+</svg>
