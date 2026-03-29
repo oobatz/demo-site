@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATLAS | Строительство и ремонт под ключ</title>
+  <meta
+    name="description"
+    content="ATLAS проектирует, строит и ремонтирует жилые и коммерческие объекты под ключ: от выезда на замер до чистовой сдачи и авторского контроля."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-frame">
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="ATLAS - На главную">
+        <span class="brand__name">ATLAS</span>
+        <span class="brand__meta">construction & renovation</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        data-menu-toggle
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" data-nav>
+        <a href="#services">Услуги</a>
+        <a href="#projects">Проекты</a>
+        <a href="#process">Процесс</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+
+      <a class="header-phone" href="tel:+79000000000">+7 (900) 000-00-00</a>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="hero__image-wrap" aria-hidden="true">
+          <img class="hero__image" src="assets/hero-architecture.svg" alt="">
+        </div>
+        <div class="hero__veil" aria-hidden="true"></div>
+
+        <div class="hero__content">
+          <p class="hero__brand animate-up">ATLAS</p>
+          <p class="hero__kicker animate-up">
+            Жилые и коммерческие объекты под ключ
+          </p>
+          <h1 class="hero__title animate-up">
+            Строим и ремонтируем пространства, которые спокойно проходят проверку временем.
+          </h1>
+          <p class="hero__copy animate-up">
+            Берем объект от первого замера до сдачи с чистовой отделкой, прозрачной сметой
+            и контролем каждой бригады на площадке.
+          </p>
+
+          <div class="hero__actions animate-up">
+            <a class="button button--primary" href="#contact">Заявка на замер</a>
+            <a class="button button--ghost" href="#projects">Посмотреть проекты</a>
+          </div>
+
+          <ul class="hero__highlights animate-up" aria-label="Ключевые преимущества">
+            <li>Смета за 48 часов</li>
+            <li>Фиксация этапов в договоре</li>
+            <li>Один подрядчик на весь цикл</li>
+          </ul>
+        </div>
+
+        <div class="hero__metrics" data-reveal>
+          <div>
+            <span>8 лет</span>
+            <p>работаем на объектах разного масштаба</p>
+          </div>
+          <div>
+            <span>74</span>
+            <p>сданных проекта за последние сезоны</p>
+          </div>
+          <div>
+            <span>2 формата</span>
+            <p>жилые интерьеры и коммерческие пространства</p>
+          </div>
+          <div>
+            <span>1 команда</span>
+            <p>замер, смета, стройка, отделка и финальная приемка</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--light" id="services">
+        <div class="section__intro" data-reveal>
+          <p class="section__label">Формат работ</p>
+          <h2 class="section__title">
+            Не продаем отдельные этапы. Собираем объект как цельную систему.
+          </h2>
+          <p class="section__lead">
+            Лендинг и оффер заточены под заявку на замер, поэтому здесь только те услуги,
+            которые действительно двигают клиента к решению.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-block" data-reveal>
+            <p class="service-block__tag">Жилье</p>
+            <h3>Квартиры, дома, таунхаусы</h3>
+            <p>
+              Выполняем капитальный и чистовой ремонт, внутреннюю отделку, инженерные сети,
+              перепланировку и комплектацию материалов без разрыва между этапами.
+            </p>
+            <ul>
+              <li>ремонт под ключ</li>
+              <li>дизайн-реализация</li>
+              <li>сопровождение закупок</li>
+            </ul>
+          </article>
+
+          <article class="service-block" data-reveal>
+            <p class="service-block__tag">Коммерция</p>
+            <h3>Офисы, шоурумы, магазины, сервисные помещения</h3>
+            <p>
+              Умеем работать в сроках бизнеса: адаптируем график под арендатора,
+              считаем этапы заранее и держим стройку в понятном операционном ритме.
+            </p>
+            <ul>
+              <li>строительство и отделка</li>
+              <li>инженерная подготовка</li>
+              <li>объекты под запуск бизнеса</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--warm" id="projects">
+        <div class="section__intro" data-reveal>
+          <p class="section__label">Последние проекты</p>
+          <h2 class="section__title">
+            Делаем интерьеры и фасады так, чтобы их можно было показывать как результат,
+            а не объяснять как компромисс.
+          </h2>
+        </div>
+
+        <article class="project-row" data-reveal>
+          <div class="project-row__media">
+            <img src="assets/project-living.svg" alt="Современный интерьер квартиры">
+          </div>
+          <div class="project-row__content">
+            <p class="project-row__meta">Квартира 128 м² · 5 месяцев</p>
+            <h3>Ремонт под сдачу с дорогим впечатлением и устойчивой отделкой</h3>
+            <p>
+              Пересобрали планировку, вывели инженерку под бытовой сценарий семьи
+              и оставили визуальную строгость без перегруза материалами.
+            </p>
+            <ul>
+              <li>единая поставка материалов</li>
+              <li>скрытые инженерные узлы</li>
+              <li>контроль авторской реализации на объекте</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-row project-row--reverse" data-reveal>
+          <div class="project-row__media">
+            <img src="assets/project-house.svg" alt="Фасад частного дома">
+          </div>
+          <div class="project-row__content">
+            <p class="project-row__meta">Дом 240 м² · 7 месяцев</p>
+            <h3>Частный дом с чистой геометрией фасада и инженерией без переделок</h3>
+            <p>
+              Вели объект с чернового контура, синхронизировали фасадные работы,
+              коммуникации и внутреннюю отделку, чтобы не терять время на стыках подрядчиков.
+            </p>
+            <ul>
+              <li>поэтапная смета с фиксацией объемов</li>
+              <li>одна команда на всю стройку</li>
+              <li>финальная сдача по чек-листу</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-row" data-reveal>
+          <div class="project-row__media">
+            <img src="assets/project-commercial.svg" alt="Коммерческое пространство с панорамным фасадом">
+          </div>
+          <div class="project-row__content">
+            <p class="project-row__meta">Шоурум 310 м² · 4 месяца</p>
+            <h3>Коммерческое пространство, которое готово к запуску в день приемки</h3>
+            <p>
+              Сконцентрировались на сроках и потоке работ: фасад, свет, вентиляция,
+              зоны экспозиции и склад были согласованы как единый маршрут строительства.
+            </p>
+            <ul>
+              <li>сжатый производственный график</li>
+              <li>ночные работы на шумных этапах</li>
+              <li>подготовка помещения к открытию</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section class="section section--deep" id="process">
+        <div class="section__intro section__intro--light" data-reveal>
+          <p class="section__label">Как строим работу</p>
+          <h2 class="section__title">
+            Каждый этап закреплен так, чтобы клиент не тратил энергию на ручное управление объектом.
+          </h2>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-step" data-reveal>
+            <span>01</span>
+            <h3>Выезд и бриф</h3>
+            <p>
+              Смотрим объект, фиксируем ограничения, обсуждаем задачу и бюджетный коридор
+              без рекламных обещаний.
+            </p>
+          </article>
+
+          <article class="process-step" data-reveal>
+            <span>02</span>
+            <h3>Смета и календарь</h3>
+            <p>
+              Формируем поэтапную смету, материалы, сроки и контрольные точки,
+              чтобы вы понимали экономику проекта до старта.
+            </p>
+          </article>
+
+          <article class="process-step" data-reveal>
+            <span>03</span>
+            <h3>Стройка и отчетность</h3>
+            <p>
+              Ведем объект в одном ритме: фотофиксация, статус по этапам,
+              контроль качества и своевременные поставки.
+            </p>
+          </article>
+
+          <article class="process-step" data-reveal>
+            <span>04</span>
+            <h3>Сдача и гарантия</h3>
+            <p>
+              Передаем объект по чек-листу, фиксируем завершение этапов и остаемся на связи
+              для гарантийного сопровождения.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--light section--split">
+        <div class="section__intro" data-reveal>
+          <p class="section__label">Почему выбирают ATLAS</p>
+          <h2 class="section__title">
+            Впечатление от объекта складывается не из слов на сайте, а из дисциплины на площадке.
+          </h2>
+        </div>
+
+        <div class="trust-grid">
+          <article data-reveal>
+            <h3>Прозрачная смета</h3>
+            <p>
+              Разбиваем бюджет по этапам и не прячем стоимость в размытых формулировках.
+            </p>
+          </article>
+          <article data-reveal>
+            <h3>Контроль сроков</h3>
+            <p>
+              Планируем критические точки заранее, чтобы запуск бизнеса или переезд не сдвигался.
+            </p>
+          </article>
+          <article data-reveal>
+            <h3>Один ответственный контур</h3>
+            <p>
+              Не перекладываем ошибки между подрядчиками: весь цикл находится внутри одной команды.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section cta-section" id="contact">
+        <div class="cta-panel">
+          <div class="cta-panel__content" data-reveal>
+            <p class="section__label">Заявка на замер</p>
+            <h2 class="section__title">
+              Подготовим ориентир по бюджету и формату работ еще до первой встречи.
+            </h2>
+            <p class="cta-panel__text">
+              Оставьте контакт, и мы свяжемся, чтобы уточнить тип объекта, сроки
+              и собрать адекватную стартовую смету без лишних обещаний.
+            </p>
+
+            <div class="contact-list">
+              <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+              <a href="mailto:hello@atlas-build.ru">hello@atlas-build.ru</a>
+              <a href="#">Telegram</a>
+              <a href="#">WhatsApp</a>
+            </div>
+          </div>
+
+          <form class="lead-form" id="lead-form" novalidate data-reveal>
+            <div class="lead-form__field">
+              <label for="name">Имя</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Как к вам обращаться">
+              <small class="lead-form__error" data-error-for="name"></small>
+            </div>
+
+            <div class="lead-form__field">
+              <label for="phone">Телефон</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__">
+              <small class="lead-form__error" data-error-for="phone"></small>
+            </div>
+
+            <div class="lead-form__field">
+              <label for="objectType">Тип объекта</label>
+              <select id="objectType" name="objectType">
+                <option value="">Выберите формат</option>
+                <option value="apartment">Квартира</option>
+                <option value="house">Дом</option>
+                <option value="commercial">Коммерческий объект</option>
+              </select>
+              <small class="lead-form__error" data-error-for="objectType"></small>
+            </div>
+
+            <div class="lead-form__field">
+              <label for="message">Комментарий</label>
+              <textarea id="message" name="message" rows="4" placeholder="Кратко опишите задачу, площадь или желаемые сроки"></textarea>
+            </div>
+
+            <button class="button button--primary button--full" type="submit">
+              Получить консультацию
+            </button>
+            <p class="lead-form__note">
+              Нажимая кнопку, вы соглашаетесь на обработку контактных данных для обратной связи.
+            </p>
+            <p class="lead-form__status" id="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>ATLAS</p>
+      <p>Строительство и ремонт под ключ для жилья и бизнеса</p>
+      <a href="#top">Наверх</a>
+    </footer>
+
+    <div class="mobile-cta" data-mobile-cta>
+      <a class="button button--primary button--full" href="#contact">Оставить заявку</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
